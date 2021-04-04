@@ -29,6 +29,13 @@ $ npm run build-win       # build win   only
 $ npm run build-all       # build linux/mac/win
 ```
 
+# OPEN DEV TOOL ON ELECTRON
+Please uncomment out following line in `public/electron.js`
+
+```js
+mainWindow.webContents.openDevTools()
+```
+
 # FOR MAC USER
 Please remove following line in `package.json`.
 

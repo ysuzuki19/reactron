@@ -23,10 +23,7 @@
       "node_modules/**/*"
     ],
     "directories": {
-      "buildResources": "assets"
-    },
-    "mac": {
-      "target": "tar.gz"
+      "buildResources": "build"
     }
   },
   "scripts": {

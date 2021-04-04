@@ -23,7 +23,15 @@
       "node_modules/**/*"
     ],
     "directories": {
-      "buildResources": "build"
+      "buildResources": "build",
+      "output": "dist/package-${os}"
+    },
+    "linux": {
+    },
+    "win": {
+    },
+    "mac": {
+      "target": "tar.gz"
     }
   },
   "scripts": {
@@ -31,13 +39,18 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+
     "electron": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
+
     "build-all": "electron-builder build -mwl",
     "prebuild-all": "npm run build",
+
     "build-linux": "electron-builder build --linux",
     "prebuild-linux": "npm run build",
+
     "build-mac": "electron-builder build --mac",
     "prebuild-mac": "npm run build",
+
     "build-win": "electron-builder build --win",
     "prebuild-win": "npm run build"
   },
